@@ -5,6 +5,11 @@ html, body {
 
 body {
     display: flex;
+    background-color: rgb(24, 24, 24);
+    color: #ffffff;
+    background-image: url(https://cdn.discordapp.com/attachments/827965567520342017/912325229462818816/2222765.jpg);
+    width: 1920;
+    height: 1080;
 }
 
 header {
@@ -17,6 +22,10 @@ main {
     margin: 0 auto;
 }
 
+.centertext{
+    text-align: center;
+}
+
 .inputbox {
     display: flex;
     justify-content: center;
@@ -25,6 +34,33 @@ main {
 .inputbox > input, button {
     margin: 0.5rem;
 }
+
+.top {
+background-color: #ffffff;
+height: 15%;
+
+}
+
+.flex{
+display: flex;
+}
+
+.textbox {
+margin-top: 10px;
+margin-bottom: 10px;
+padding: 3%;
+width: 25%;
+height: auto;
+background-color: #2e2e2e;
+color: #ffff;
+}
+
+.botbox{
+background-color: #2e2e2e;
+margin-bottom: 0px;
+height: 50px;
+}
+
 
 #message {
     height: 14rem;

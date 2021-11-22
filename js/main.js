@@ -15,16 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // skicka texten till funktionen för att översätta
         const translation = translate(text);
         // Hur kan du rensa textboxen?
+        textbox.value = ""; 
         // skriv ut översättningen i message
         display(translation, message);
+
+        
     });
 
 });
 
+
 const translate = (text) => {
     // översätt texten till rövarspråket
-    console.log(text)
-    return text;
+    var string = text.toLowerCase();
+    var vowels = ["a", "e", "i", "o", "u","å","ä","ö", " "];
+    var translation = "";
+        for (i = 0; i < string.length; i++) {
+        var current = string.charAt(i); 
+        if (vowels.indexOf(current) != -1)
+        translation = (translation + (current));
+        else 
+        translation = (translation + (current + "o" + current));
+    
+}
+return translation;
+//let kons = "bcdfghjklmnpqrstvxzBCDFGHJKLMNPQRSTVXZ";
+
+//for (let i = 0; i <text.length; i++){
+  //  console.log (text[i])}   
 };
 
 const display = (translation, element) => {
